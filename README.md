@@ -107,7 +107,6 @@ Reference these diagrams for a visual of traffic flows through this topology.
 - Download `Student Lab Details` File from Qwiklabs interface for later reference
 - Click Open Console and authenticate to AWS account with credentials displayed in Qwiklabs
 - Verify your selected region in AWS console (top right) matches the aws-gwlb-lab-secrets.txt
-- Open the [quiz](https://docs.google.com/forms/d/e/1FAIpQLSfkJdW2cz8kurjB0n7M-WvFOaqfRCuY6OemWf6okQheGO5LMQ/viewform) to answer questions as you go through the guide
   
 ### 3.1.1. Find SSH Key Pair Name
 
@@ -213,10 +212,10 @@ terraform version
 
 ## 3.7. Clone Deployment Git Repository 
 
-- Clone the Repository with the terraform to deploy
+- Clone the Repository with terraform to deploy
   
 ```
-git clone https://github.com/PaloAltoNetworks/lab-aws-gwlb-vmseries.git && cd lab-aws-gwlb-vmseries/terraform/panorama
+git clone https://github.com/NicSutcliffe/lab-aws-gwlb-vmseries.git && cd lab-aws-gwlb-vmseries/terraform/panorama
 ```
 
 ## 3.8. Deploy Panorama and TGW Infrastructure with Terraform
@@ -258,7 +257,7 @@ terraform apply
 
 - Panorama Tab -> Plugins -> Check Now
 
-- Search for `sw_fw_license-1.1.1` -> Download -> Install
+- Search for `sw_fw` -> Locate the latest version -> Download -> Install
 
 - Configure SW Firewall License Bootstrap Definition
   - Name: `aws-gwlb-lab`
@@ -511,7 +510,7 @@ debug logview component bts_details
 
 <img src="https://user-images.githubusercontent.com/43679669/109860663-6af86100-7c2c-11eb-88f3-0aac14d256a8.gif" width=50% height=50%>
 
-- Resolve the issue with the Health Probes
+- Resolve the issue with the Health Probes:
 
 > &#8505; We can see in the traffic logs that the health probes are being received. So we know they are being permitted by the AWS Security Group. They are being permitted by catch-all security policy but there is no return traffic (Notice 0 Bytes Received in the traffic logs). This indicates the VM-Series dataplane interface is not listening 
 
