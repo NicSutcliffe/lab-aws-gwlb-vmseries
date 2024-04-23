@@ -17,10 +17,12 @@ There are regularly maintained terraform modules for VM-Series deployments in AW
 
 This lab will involve deploying a solution for AWS using Palo Alto Networks VM-Series in the Gateway Load Balancer (GWLB) topology.
 
-The lab begins by deploying a Panorama that the VM-Series will bootstrap to. An existing Panorama is required for this lab. Panorama assumptions:
+The lab assumes an existing Panorama that the VM-Series will bootstrap to. Panorama assumptions:
 - Accessible with public IP on TCP 3978
 - Prepped with Template Stacks and Device Groups
 - vm-auth-key generated on Panorama (Will be done manually as part of the lab)
+
+The lab has been updated to include a Panorama deployment as the first task. You will then manually install the Software Licensing Plugin and configure it for bootstrapping.
 
 This guide is intended to be used with a specific QwikLabs scenario, and some steps are specific to Qwiklabs. This could be easily adapted for other environments.
 
