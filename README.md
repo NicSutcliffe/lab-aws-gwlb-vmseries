@@ -399,11 +399,6 @@ In the meantime, lets go look at what you built!
 
 > &#10067; Which interface has a public IP associated?
 
-> &#10067; Check the security group associated with the "data" interface. What is allowed inbound? What is the logic of this SG?
-
-> &#10067; Review the Instance Profile (IAM Role) the VM-Series launched with. What actions does it allow? 
-
-> &#10067; What are some other use-cases where you need to allow additional IAM permissions for the VM-Series instance profile?
 
 ---
 
@@ -467,7 +462,7 @@ vmseries_eips = {
 > - When using interface swap, the subnet for the second ENI will also need path to S3 and Internet
 >   - Interface swap can be done with user-data or in init-cfg parameters. 
 >   - Generally better to do via user-data
-> - Template Stack and Device Group names must match exactly or they will never join Panorama (no indication of this in Panorama logs)
+> - Template Stack and Device Group names must match **exactly** or they will never join Panorama (no indication of this in Panorama logs)
 > - If there are any issues with licensing, VM-Series will not join Panorama (no indication of this in Panorama logs)
 
 - From SSH session on either VM-Series, check the bootstrap summary
