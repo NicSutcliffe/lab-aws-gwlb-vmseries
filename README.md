@@ -71,8 +71,8 @@ Example Code block following an action item
   - [3.15. Check bootstrap logs](#315-check-bootstrap-logs)
   - [3.16. Fix GWLB Health Probes](#316-fix-gwlb-health-probes)
   - [3.17. Inbound Traffic Flows to App Spoke VPCs](#317-inbound-traffic-flows-to-app-spoke-vpcs)
-    - [3.17.1. Update Spoke1 App VPC networking for Inbound inspection with GWLB](#3171-update-spoke1-app-vpc-networking-for-inbound-inspection-with-gwlb)
-    - [3.17.2. Update Spoke2 App VPC networking for Inbound inspection with GWLB](#3172-update-spoke2-app-vpc-networking-for-inbound-inspection-with-gwlb)
+    - [3.17.1. Verify/Update Spoke1 App VPC networking for Inbound inspection with GWLB](#3171-verifyupdate-spoke1-app-vpc-networking-for-inbound-inspection-with-gwlb)
+    - [3.17.2. Verify/Update Spoke2 App VPC networking for Inbound inspection with GWLB](#3172-verifyupdate-spoke2-app-vpc-networking-for-inbound-inspection-with-gwlb)
     - [3.17.3. Test Inbound Traffic to Spoke Web Apps](#3173-test-inbound-traffic-to-spoke-web-apps)
     - [3.17.4. Test Outbound Traffic from Spoke1 Instance](#3174-test-outbound-traffic-from-spoke1-instance)
     - [3.17.5. Check Inbound Traffic Logs](#3175-check-inbound-traffic-logs)
@@ -563,13 +563,13 @@ debug logview component bts_details
 <img src="https://user-images.githubusercontent.com/43679669/110424278-8b7f4b80-8070-11eb-91e2-87bab5882f21.gif" width=50% height=50%> 
 
 
-### 3.17.1. Update Spoke1 App VPC networking for Inbound inspection with GWLB
+### 3.17.1. Verify/Update Spoke1 App VPC networking for Inbound inspection with GWLB
 
 - First investigate `spoke1-app-vpc` Route Tables in the VPC Dashboard and try to identify and fix what is missing. Refer to the diagram for guidance.
 - For **inbound** traffic, no changes are required for the `web` route tables in the Spoke VPCs
 - Refer to terraform output for GWLB Endpoint IDs (or identify them in VPC Dashboard)
 
-- **To verify your solution (or shortcut!), expand below for specific steps**
+- **To verify your routes, see below for specific steps. Note that many of these routes have been created for you by Terraform to reduce the time commitment required for this specific lab.**
 
 Starting left to right on the diagram...
 
@@ -614,13 +614,13 @@ Starting left to right on the diagram...
 
 ---  
 
-### 3.17.2. Update Spoke2 App VPC networking for Inbound inspection with GWLB
+### 3.17.2. Verify/Update Spoke2 App VPC networking for Inbound inspection with GWLB
 
 - First investigate **`spoke2-app-vpc`** Route Tables in the VPC Dashboard and try to identify and fix what is missing. Refer to the diagram for guidance.
 - For **inbound** traffic, no changes are needed for the `web` route tables in the App Spoke VPCs
 - Refer to terraform output for GWLB Endpoint IDs (or identify them in VPC Dashboard)
 
-- **To verify your solution (or shortcut!), expand below for specific steps**
+- - **To verify your routes, see below for specific steps. Note that many of these routes have been created for you by Terraform to reduce the time commitment required for this specific lab.**
 
 Only `spoke2-vpc-igw-edge` Route Table is missing routes for App2 Spoke
 
@@ -694,7 +694,7 @@ Access the spoke web servers console using the AWS Systems Manager connect
 
 - First investigate `spoke1-app-vpc` Route Tables in the VPC Dashboard and try to identify and fix what is missing. Refer to the diagram for guidance.
 
-- **To verify your solution (or shortcut!), expand below for specific steps**
+- **To verify your routes, see below for specific steps. Note that some of these routes have been created for you by Terraform to redude the time commitment required for this specific lab.**
 
   - VPC Dashboard -> Filter by VPC -> `spoke1-app-vpc`
   - Route Tables -> `spoke1-vpc-web1` -> Routes Tab (bottom panel)
@@ -716,7 +716,7 @@ Access the spoke web servers console using the AWS Systems Manager connect
 
 - First investigate `spoke2-app-vpc` Route Tables in the VPC Dashboard and try to identify and fix what is missing. Refer to the diagram for guidance.
 
-- **To verify your solution (or shortcut!), expand below for specific steps**
+- **To verify your routes, see below for specific steps. Note that some of these routes have been created for you by Terraform to redude the time commitment required for this specific lab.**
 
 - Nothing is missing for `spoke2-app-vpc`! Web1 and Web2 Route Tables already have routes to TGW.
 
@@ -730,7 +730,7 @@ Access the spoke web servers console using the AWS Systems Manager connect
 
 - First investigate Transit Gateway Route Tables in the VPC Dashboard and try to identify and fix what is missing. Refer to the diagram for guidance.
 
-- **To verify your solution (or shortcut!), expand below for specific steps**
+- **To verify your TGW routes, see below for specific steps**
 
   - VPC Dashboard -> Transit Gateway Route Tables -> Select `from-spoke-vpcs`
   -  Check `Associations` tab and verify the two spoke App VPCs are associated
