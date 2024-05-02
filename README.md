@@ -20,7 +20,7 @@ This lab will involve deploying a solution for AWS using Palo Alto Networks VM-S
 The lab assumes an existing Panorama that the VM-Series will bootstrap to. Panorama assumptions:
 - Accessible with public IP on TCP 3978
 - Prepped with Template Stacks and Device Groups
-- vm-auth-key generated on Panorama (Will be done manually as part of the lab)
+- auth-key generated on Panorama (Will be done manually as part of the lab)
 
 The lab has been updated to include a Panorama deployment as the first task. You will then manually install the Software Licensing Plugin and configure it for bootstrapping.
 
