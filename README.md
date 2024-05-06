@@ -27,8 +27,8 @@ The lab has been updated to include a Panorama deployment as the first task. You
 This guide is intended to be used with a specific QwikLabs scenario, and some steps are specific to Qwiklabs. This could be easily adapted for other environments.
 
 ```
-Manual Last Updated: 2024-04-23
-Lab Last Tested: 2024-04-23
+Manual Last Updated: 2024-05-02
+Lab Last Tested: 2024-05-04
 ```
 
 ## 1.2. Lab Guide Syntax conventions
