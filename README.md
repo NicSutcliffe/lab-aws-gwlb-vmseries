@@ -95,10 +95,10 @@ Example Code block following an action item
 
 Reference these diagrams for a visual of traffic flows through this topology.
 ### 2.1.1. Outbound Traffic Flows
-<img src="https://user-images.githubusercontent.com/43679669/114664326-8d6ca800-9cc9-11eb-934e-2742fd6a1800.png" width=30% height=30%>
+<img src="https://raw.githubusercontent.com/NicSutcliffe/lab-aws-gwlb-vmseries/main/docs/images/AWS%20Qwiklabs%20-%20GWLB%20-%20Traffic%20Flow%20-%20Outbound.png" width=30% height=30%>
 
 ### 2.1.2. Inbound Traffic Flows
-<img src="https://user-images.githubusercontent.com/43679669/114664190-572f2880-9cc9-11eb-8bd1-216d18dec2ac.png" width=30% height=30%>
+<img src="https://raw.githubusercontent.com/NicSutcliffe/lab-aws-gwlb-vmseries/main/docs/images/AWS%20Qwiklabs%20-%20GWLB%20-%20Traffic%20Flow%20-%20Inbound.png" width=30% height=30%>
 
 # 3. Lab Steps
 ## 3.1. Initialize Lab
