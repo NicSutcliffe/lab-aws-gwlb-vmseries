@@ -49,20 +49,20 @@ spoke1_vpc_routes_additional = {
   }
 }
 
-spoke2_vpc_routes_additional = {
- igw-edge-alb1-to-endpoint1 = {
-   route_table   = "igw-edge"
-   prefix        = "10.250.0.16/28"
-   next_hop_type = "vpc_endpoint"
-   next_hop_name = "spoke2-inbound1"
- }
- igw-edge-alb2-to-endpoint2 = {
-   route_table   = "igw-edge"
-   prefix        = "10.250.1.16/28"
-   next_hop_type = "vpc_endpoint"
-   next_hop_name = "spoke2-inbound2"
- }
-}
+##spoke2_vpc_routes_additional = {
+## igw-edge-alb1-to-endpoint1 = {
+##   route_table   = "igw-edge"
+##   prefix        = "10.250.0.16/28"
+##   next_hop_type = "vpc_endpoint"
+##   next_hop_name = "spoke2-inbound1"
+## }
+## igw-edge-alb2-to-endpoint2 = {
+##   route_table   = "igw-edge"
+##   prefix        = "10.250.1.16/28"
+##   next_hop_type = "vpc_endpoint"
+##   next_hop_name = "spoke2-inbound2"
+## }
+##}
 
 
 vpc_routes_additional = {
