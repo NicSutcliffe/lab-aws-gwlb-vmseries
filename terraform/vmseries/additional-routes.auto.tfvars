@@ -5,12 +5,12 @@ spoke1_vpc_routes_additional = {
     next_hop_type = "vpc_endpoint"
     next_hop_name = "spoke1-inbound1"
   }
-  igw-edge-alb2-to-endpoint2 = {
-    route_table   = "igw-edge"
-    prefix        = "10.200.1.16/28"
-    next_hop_type = "vpc_endpoint"
-    next_hop_name = "spoke1-inbound2"
-  }
+#  igw-edge-alb2-to-endpoint2 = {
+#    route_table   = "igw-edge"
+#    prefix        = "10.200.1.16/28"
+#    next_hop_type = "vpc_endpoint"
+#    next_hop_name = "spoke1-inbound2"
+#  }
   web1-default-to-tgw = {
     route_table   = "web1"
     prefix        = "0.0.0.0/0"
